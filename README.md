@@ -5,9 +5,7 @@ Pillar - The Simple Mobile First Grid System
 
 ###Mobile First Templating and Responsive Grid.
 
-<img src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" style="width: 300px;
-margin: 5em;
-padding: 1em;">
+<img src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" style="width:300px;margin:5em;padding:1em;">
 
 #The Grid
 
