@@ -2,9 +2,9 @@ Pillar
 ======
 The Simple Mobile First Grid System
 
-#The Pillar Grid System
+##The Pillar Grid System
 
-Mobile First Templating and Responsive Grid.
+##Mobile First Templating and Responsive Grid.
 
 #The Grid
 
