@@ -9,16 +9,19 @@ Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation
 
 The basic selectors:
 
-###boundary 
+##boundary 
 To declare a new section in the grid.
 
-###pillar
+##pillar
 This class uses units of 1-5.
 
-###fill
+##fill
 This class uses units of 1-6.
+    
+    $base-height: percentage(80/480) 
+    .fill-two { height: $base-height * 2 }
 
-###edge
+##edge
 This make a standard presentation box with paddings and margins.
 
 ##Made with love from:
