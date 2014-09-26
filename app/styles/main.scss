@@ -16,17 +16,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 @mixin dark-shade {
-    background-color: #343434;
-//    background-image: -webkit-linear-gradient(top, #343434, #212121);
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(233, 233, 233, 0.57));
-    border: 1px solid rgba(98, 98, 98, 0.75);
-    position: relative;
-    @include color-carbon;
-    @include light-text;
-    @include brand-font;
-    input {
-      @include color-rust;
-    }
+  background-color: #343434;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(233, 233, 233, 0.57));
+  border: 1px solid rgba(98, 98, 98, 0.75);
+  position: relative;
+  @include color-carbon;
+  @include light-text;
+  @include brand-font;
+  input {
+    @include color-rust;
+  }
 }
 
 @mixin tag {
@@ -101,8 +100,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 15px 0 10px 0;
 }
 
-// margin //
-
 @mixin root-margin {
   margin: 15px;
 }
@@ -124,6 +121,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin no-pad-top {
   padding-top: 0
+}
+
+@mixin no-margin-top {
+  margin-top: 0
 }
 
 // ***** ------ [ FORM MIXINS ] ------ *** //
@@ -430,7 +431,6 @@ $base-width: percentage(64/320);
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   cursor: pointer;
-  /*  height: 35%;*/
 }
 
 .fill-split-left {
@@ -517,7 +517,6 @@ a {
 
 .dark-form {
   margin: 0;
-//  background: rgba(0, 0, 0, 0.5);
   label {
     @include brand-font
   }
@@ -530,7 +529,6 @@ a {
     border-radius: 0 0 .5em .5em;
     width: 65%;
     font-size: 18px;
-/*    color: #87D787;*/
     top: -4px;
     @include color-rust;
     @include light-text;
@@ -562,11 +560,9 @@ a {
   @include back-carbon;
   @include brand-font;
   section {
-    float: left;
-    /*    overflow:hidden;*/
+    @include float-left;
     &.boundary {
-      @include back-chrome;
-      background: rgba(222, 222, 222, 0.17);
+      @include back-chrome;      
       left: 1px;
       bottom: 1px;
       p {
@@ -605,23 +601,35 @@ a {
       }
     }
     &.user {
-      .in {
+      .sign-in {
         @include back-carbon;
         @include color-light;
         @include light-text;
+        @include no-pad-top;
+        @include no-margin-top;
         &:hover {
-
+          @include back-chrome;
+          @include color-carbon;
+          @include dark-text        
         }
+        cursor: pointer;
+        width: 100%;
+        padding: 15px 0;  
       }
-      .up {
+      .sign-up {
         @include back-brand;
         @include color-light;
         @include light-text;
+        @include no-margin-top;
+        @include common-padding;
+        cursor: pointer;
         .headline-footer {
           @include back-brand
         }
         &:hover {
-          @include back-action
+          @include back-chrome;
+          @include color-carbon;
+          @include dark-text
         }
       }
     }
@@ -645,7 +653,7 @@ a {
         margin: 0;
         padding-top: 1%;
         li {
-          float: left;
+          @include float-left;
           background: transparent;
           padding-top: 25px;
           font-size: 2.35em;
@@ -806,15 +814,8 @@ a {
   @include dark-text
 }
 
-
 .edge { @include trim }
 
-.dark-edge {
-  @include dark-shade
-}
-
-
-
-
+.dark-edge { @include dark-shade }
 
 
