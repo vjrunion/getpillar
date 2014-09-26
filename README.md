@@ -9,11 +9,18 @@ Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation
 
 The basic selectors:
 
-- boundary: To declare a new section in the grid.
-- pillar: This class uses units of 1-5.
-- fill: This class uses units of 1-6.
-- edge: This make a standard presentation box with paddings and margins.
+###boundary 
+To declare a new section in the grid.
 
-Made with love from:
+###pillar
+This class uses units of 1-5.
+
+###fill
+This class uses units of 1-6.
+
+###edge
+This make a standard presentation box with paddings and margins.
+
+##Made with love from:
 
 <img src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" style="width:25%;margin:5em;padding:1em;">
