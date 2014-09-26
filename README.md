@@ -18,9 +18,9 @@ This class uses units of 1-5.
 ##fill
 This class uses units of 1-6.
     
-    $base-height: percentage(80/480) - (Calculation)
+    Calculation = $base-height: percentage(80/480)
     
-    .fill-two { height: $base-height * 2 } - (example usage)
+        Example: .fill-two { height: $base-height * 2 }
 
 ##edge
 This make a standard presentation box with paddings and margins.
