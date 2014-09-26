@@ -86,6 +86,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   box-shadow: -30px 5px 45px 20px rgba(54, 54, 54, 0.5);
 }
 
+@mixin right-shade {
+  box-shadow: 30px 45px 55px 10px rgba(0, 0, 0, 0.27); 
+}
+
+@mixin simple-scale {
+  -webkit-transform: matrix(1.606,0,0,1.492,0,0);
+  -moz-transform: matrix(1.606,0,0,1.492,0px,0px);
+  -ms-transform: matrix(1.606,0,0,1.492,0,0);
+  -o-transform: matrix(1.606,0,0,1.492,0,0);
+  transform: matrix(1.606,0,0,1.492,0,0); 
+}
+
 // *** ------ [ PADDING MIXINS ] ------ *** //
 
 @mixin root-padding {
@@ -276,7 +288,7 @@ $color-brand: #5cb85c;
 }
 
 .call-out {
-  background: rgba(41, 133, 152, 0.57);
+  background: rgba(41, 133, 152, 0.77);
   color: #FFF;
   font-size: 1em;
   height: 7%;
@@ -358,6 +370,11 @@ $color-brand: #5cb85c;
   transition: left 0.6s ease-in;
 }
 
+@mixin fade-fast {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
 @mixin right-in {
   -webkit-transition: right 0.6s ease-in;
   transition: right 0.6s ease-in;
@@ -434,12 +451,12 @@ $base-width: percentage(64/320);
 
 .foundation .pillar-fixed-footer {
   width: 50%;
-  background-color: #323232;
   bottom: 0;
+  opacity: 0.89;
   position: absolute;
   left: 25%;
   height: 25px;
-  border: 1px solid #474747;
+  border: 1px solid #ECECEC;
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   cursor: pointer;
@@ -534,16 +551,16 @@ a {
     @include brand-font
   }
   input {
-    background: rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.77);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     font-weight: 100;
     text-transform: uppercase;
     position: relative;
     border-radius: 0 0 .5em .5em;
-    width: 65%;
-    font-size: 18px;
+    width: 35%;
+    font-size: 20px;
     top: -4px;
-    @include color-rust;
+    @include color-brand;
     @include light-text;
     @include brand-font;
   }
@@ -601,9 +618,12 @@ a {
       }
     }
     &.id {
+      h1, h2 {
+        @include color-base;
+        @include light-text
+      }
       @include core-image;
       .shade {
-
         h1 {
           line-height: 1em
         }
@@ -623,14 +643,14 @@ a {
         &:hover {
           @include back-chrome;
           @include color-carbon;
-          @include dark-text        
+          @include dark-text;       
         }
         cursor: pointer;
         width: 100%;
         padding: 15px 0;  
       }
       .sign-up {
-        @include back-brand;
+        @include back-carbon;
         @include color-light;
         @include light-text;
         @include no-margin-top;
@@ -642,7 +662,7 @@ a {
         &:hover {
           @include back-chrome;
           @include color-carbon;
-          @include dark-text
+          @include dark-text;
         }
       }
     }
@@ -665,20 +685,22 @@ a {
         padding: 0;
         margin: 0;
         padding-top: 1%;
-        overflow: auto;
         min-height: 16.666%;
         li {
           @include float-left;
-          background: transparent;
+          @include color-mid;
           padding-top: 20px;
           text-shadow: none;
-          opacity: 0.35;
+          opacity: 0.25;
           i {
             font-size: 1.95em;
+            cursor: pointer;
           }
           &:hover {
-            @include color-action;
+            @include color-carbon;
             opacity: 1.0;
+            @include fade-fast;
+            @include simple-scale;         
           }
         }
       }
@@ -755,7 +777,7 @@ a {
 // *** ---- [ BACKGROUNDS ] ---- *** /
 
 .bg-dark {
-  @include back-dark
+  @include back-black
 }
 
 .bg-brand {
@@ -841,5 +863,7 @@ a {
 .edge { @include trim }
 
 .dark-edge { @include dark-shade }
+
+.right-shade { @include right-shade }
 
 
