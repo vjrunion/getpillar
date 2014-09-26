@@ -3,7 +3,7 @@ Pillar - The Simple Mobile First Grid System
 
 #The Pillar Grid System
 
-###Mobile First Templating and Responsive Grid.
+##Mobile First Templating and Responsive Grid.
 
 <img src="http://sass-lang.com/assets/img/logos/logo-235e394c.png" style="width:25%;margin:5em;padding:1em;">
 
@@ -13,8 +13,8 @@ Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation
 
 The basic selectors:
 
-- .boundary
-- .pillar
-- .fill
-- .edge
+- boundary: To declare a new section in the grid.
+- pillar: This class uses units of 1-5.
+- fill: This class uses units of 1-6.
+- edge: This make a standard presentation box with paddings and margins.
 
