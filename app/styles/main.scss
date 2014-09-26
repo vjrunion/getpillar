@@ -524,14 +524,15 @@ a {
   input {
     background: rgba(0, 0, 0, 0.65);
     border: 1px solid rgba(0, 0, 0, 0.75);
-    font-weight: 300;
+    font-weight: 100;
     text-transform: uppercase;
     position: relative;
     border-radius: 0 0 .5em .5em;
     width: 65%;
-    font-size: 24px;
-    color: #87D787;
+    font-size: 18px;
+/*    color: #87D787;*/
     top: -4px;
+    @include color-rust;
     @include light-text;
     @include brand-font;
   }
