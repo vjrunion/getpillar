@@ -15,12 +15,16 @@ To declare a new section in the grid.
 ##pillar
 This class uses units of 1-5.
 
+    Calculation = $base-width: percentage(64/320);
+    
+    Example = .pillar-two { width: $base-width * 2 }
+
 ##fill
 This class uses units of 1-6.
     
-    Calculation = $base-height: percentage(80/480)
+    Calculation = $base-height: percentage(80/480);
     
-        Example: .fill-two { height: $base-height * 2 }
+    Example = .fill-two { height: $base-height * 2 }
 
 ##edge
 This make a standard presentation box with paddings and margins.
