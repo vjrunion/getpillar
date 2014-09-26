@@ -74,6 +74,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   clear: both
 }
 
+@mixin max-up {
+  height: 100;
+}
+
+@mixin max-right {
+  width: 100;
+}
+
+@mixin simple-shade {
+  box-shadow: -30px 5px 45px 20px rgba(54, 54, 54, 0.5);
+}
+
 // *** ------ [ PADDING MIXINS ] ------ *** //
 
 @mixin root-padding {
@@ -486,7 +498,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.55em
+  font-size: 2.55em;
+  line-height: 1.25em;
 }
 
 h2 {
@@ -621,7 +634,7 @@ a {
         @include color-light;
         @include light-text;
         @include no-margin-top;
-        @include common-padding;
+        padding: 18px;
         cursor: pointer;
         .headline-footer {
           @include back-brand
@@ -652,14 +665,21 @@ a {
         padding: 0;
         margin: 0;
         padding-top: 1%;
+        overflow: auto;
+        min-height: 16.666%;
         li {
           @include float-left;
           background: transparent;
-          padding-top: 25px;
-          font-size: 2.35em;
-          margin-left: 3%;
+          padding-top: 20px;
           text-shadow: none;
           opacity: 0.35;
+          i {
+            font-size: 1.95em;
+          }
+          &:hover {
+            @include color-action;
+            opacity: 1.0;
+          }
         }
       }
     }
@@ -764,6 +784,10 @@ a {
 
 .bg-chrome-dark {
   @include back-chrome-dark
+}
+
+.simple-shade { 
+  @include simple-shade 
 }
 
 // *** ----[ COLORS ] ---- *** /
