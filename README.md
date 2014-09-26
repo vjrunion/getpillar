@@ -1,5 +1,6 @@
-Pillar - The Simple Mobile First Grid System
+Pillar 
 ======
+The Simple Mobile First Grid System
 
 #The Pillar Grid System
 
