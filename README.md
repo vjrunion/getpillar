@@ -7,10 +7,16 @@ Mobile First Templating and Responsive Grid.
 
 Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation. You can create odd and even based groups with up to 30 sections for each block in the grid.  All positioning and sizing is done via (percent and em) so there is no loss in the actual box model within a browser.
 
-The basic selectors:
+The basic grid constructors:
+
+##local group
+-To declare a new section in the grid.
+	<section class="local-group">
+		You new pillar group.
+	</section>
 
 ##boundary 
-To declare a new section in the grid.
+-Declares an area that exists as contstant to another area.
 
 ##pillar
 This class uses units of 1-5.
