@@ -7,7 +7,7 @@ Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation
 
 ###Grid Constructors
 
-#####local group
+###Local group
 
 To declare a new section in the grid.
 
@@ -15,11 +15,11 @@ To declare a new section in the grid.
 		You new pillar group.
 	</section>
 
-#####boundary
+###Boundary
 
 Declares an area that exists as contstant to another area.
 
-#####pillar
+###Pillar
 
 This class uses units of 1-5.
 
@@ -27,7 +27,7 @@ This class uses units of 1-5.
     
     Example = .pillar-two { width: $base-width * 2 }
 
-#####fill
+###Fill
 
 This class uses units of 1-6.
     
@@ -35,15 +35,15 @@ This class uses units of 1-6.
     
     Example = .fill-two { height: $base-height * 2 }
 
-#####edge
+###Edge
 
 This make a standard presentation box with paddings and margins.
 
-##Made with love from:
+######Made with love from:
 
--Angular
--SASS
--GRUNT
--NODE
--BOWER
--YEOMAN
+- Angular
+- SASS
+- GRUNT
+- NODE
+- BOWER
+- YEOMAN
