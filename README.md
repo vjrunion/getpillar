@@ -5,8 +5,6 @@ Pillar
 
 Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation. You can create odd and even based groups with up to 30 sections for each block in the grid.  All positioning and sizing is done via (percent and em) so there is no loss in the actual box model within a browser.
 
-###Grid Constructors
-
 ###Local group
 
 To declare a new section in the grid.
@@ -15,9 +13,13 @@ To declare a new section in the grid.
 		You new pillar group.
 	</section>
 
+A local group refers to a block that is at the highest level in the DOM tree.  All of its children will be able to reset their block dimension in ratio to this parent block's declartaion.  This is usefull when defining small area's with meaningfull and targeted content.
+
 ###Boundary
 
 Declares an area that exists as contstant to another area.
+
+
 
 ###Pillar
 
