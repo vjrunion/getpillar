@@ -1,14 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
+// * -- [ IMPORT ] -- * //
+
 @import url('mixins.scss');
 
-// *** ------ [ FONT MIXINS ] ------ *** //
+// *** ------ [ MIXINS ] ------ *** //
 
 @mixin brand-font {
   font-family: "museo-sans-rounded", "helvetica neue", "arial"
 }
-
-// *** ------[ POSITION MIXINS ] ------ *** //
 
 @mixin trim {
   margin: 3% 0 3% 0;
@@ -28,14 +28,37 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   }
 }
 
-@mixin tag {
+@mixin set-tag {
   border: 1px solid rgba(222, 222, 222, 0.17);
   margin-left: -1px;
   margin-right: -1px;
   margin-top: -1px;
   margin-bottom: -1px;
   position: relative;
+  line-height: 2.77em;
+  &.carbon {
+    border-bottom: 1px solid rgba(72, 72, 72, 0.39);
+  }
+  &.brand {
+    border-bottom: 1px solid #fff;
+  }
+  &.chrome {
+    border-bottom: 1px solid #cecece;
+  }
+  &.mid {
+    border-bottom: 1px solid #666;
+  }
+  &.light {
+
+  }
+  &.black {
+    border-bottom: 1px solid #000;
+  }
+  &.action {
+    border-bottom: 1px solid #CB2F24;
+  }
 }
+
 
 @mixin inline {
   display: block;
@@ -83,7 +106,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 @mixin simple-shade {
-  box-shadow: -30px 5px 45px 20px rgba(54, 54, 54, 0.5);
+  box-shadow: -5px 15px 85px 10px rgba(54, 54, 54, 0.67);
 }
 
 @mixin right-shade {
@@ -96,6 +119,35 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   -ms-transform: matrix(1.606,0,0,1.492,0,0);
   -o-transform: matrix(1.606,0,0,1.492,0,0);
   transform: matrix(1.606,0,0,1.492,0,0); 
+}
+
+//- SASS CUSTOM PACKAGES FOR SELF IDENTIFY -/
+
+@mixin sass-pack {
+  text-shadow: 1px 1px #B75438;
+/*  padding: 1.15em;*/
+  font-size: 1em;  
+/*  line-height: 1.75em;  */
+  letter-spacing: normal;
+}
+
+@mixin brand-pack {
+  text-shadow: 1px 1px #4C925D;
+  text-transform: none;
+/*  padding: 1.15em;*/
+  font-size: 1em;  
+/*  line-height: 1.75em;  */
+  letter-spacing: normal;  
+}
+
+@mixin angular-pack {
+  background-color: #45939F;;
+  text-shadow: 1px 1px #45939F;
+  text-transform: none;  
+  padding: 1.15em;
+  font-size: 1em;
+  line-height: 1.75em;  
+  letter-spacing: normal;
 }
 
 // *** ------ [ PADDING MIXINS ] ------ *** //
@@ -211,7 +263,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 $color-dark: #232323;
 $color-light: #dedede;
-$color-brand: #5cb85c;
+$color-brand: #45939F;
+$color-cool: #45939F;
 
 @mixin color-hover($color) {
   &:hover {
@@ -242,6 +295,10 @@ $color-brand: #5cb85c;
   @include color-def($color-light)
 }
 
+@mixin cool-tone {
+  @include color-def($color-cool)
+}
+
 @mixin back-chrome {
   background-color: #d0d0d0
 }
@@ -263,7 +320,9 @@ $color-brand: #5cb85c;
 }
 
 @mixin back-carbon {
-  background-color: #3b3b3b
+  background-color: #222222;
+  background-image: -webkit-linear-gradient(top, #222222, #313131); 
+  background-image:         linear-gradient(to bottom, #222222, #313131);
 }
 
 @mixin back-carbon-brand {
@@ -358,6 +417,10 @@ $color-brand: #5cb85c;
 
 @mixin mid-text {
   text-shadow: 0.5px 0.5px #cccccc;
+}
+
+@mixin grey-text {
+  text-shadow: 0.5px 0.5px #464646;
 }
 
 @mixin fade {
@@ -494,10 +557,10 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 13.3px;
+  font-weight: 300;
   line-height: 1.65em;
-  overflow: hidden
+  overflow: hidden;
 }
 
 a {
@@ -511,24 +574,25 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-family: "museo-sans-rounded", "helvetica neue", "arial";
   font-weight: 200;
-  text-transform: uppercase;
+  letter-spacing: -0.535;
+/*  text-transform: uppercase;*/
 }
 
 h1 {
-  font-size: 2.55em;
-  line-height: 1.25em;
+  font-size: 3.77em;
+  line-height: 3.55em;
 }
 
 h2 {
-  font-size: 1.85em
+  font-size: 2.85em
 }
 
 h3 {
-  font-size: 1.35em
+  font-size: 1.65em
 }
 
 h4 {
-  font-size: 1.15em
+  font-size: .85em
 }
 
 ul {
@@ -632,7 +696,7 @@ a {
           font-weight: 600;
         }
       }
-    }
+    }      
     &.user {
       .sign-in {
         @include back-carbon;
@@ -641,7 +705,7 @@ a {
         @include no-pad-top;
         @include no-margin-top;
         &:hover {
-          @include back-chrome;
+          @include back-mid;
           @include color-carbon;
           @include dark-text;       
         }
@@ -650,7 +714,7 @@ a {
         padding: 15px 0;  
       }
       .sign-up {
-        @include back-carbon;
+        @include back-action;
         @include color-light;
         @include light-text;
         @include no-margin-top;
@@ -664,7 +728,8 @@ a {
           @include color-carbon;
           @include dark-text;
         }
-      }
+      }      
+
     }
     &.hero {
       @include back-mid;
@@ -732,10 +797,6 @@ a {
 
 .right {
   text-align: right
-}
-
-.tag {
-  @include tag
 }
 
 // *** ----[ PADDING ] ---- *** /
@@ -846,6 +907,14 @@ a {
   @include color-rust
 }
 
+.font-carbon {
+  @include color-carbon
+}
+
+.core-reset {
+  background-color: #232323;
+}
+
 // *** ---- [ TREATMENTS ] ---- *** /
 
 .text-light {
@@ -860,10 +929,40 @@ a {
   @include dark-text
 }
 
+.grey-text { @include grey-text }
+
 .edge { @include trim }
 
 .dark-edge { @include dark-shade }
 
 .right-shade { @include right-shade }
 
+.ll-ogo {
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 5;
+}
+
+.ll-ogo-o {
+  @include color-rust
+}
+
+.sass-pack {
+  @include sass-pack
+}
+
+.brand-pack {
+  @include brand-pack
+}
+
+.angular-pack {
+  @include angular-pack
+}
+
+.tag {
+  @include set-tag
+}
+
+.set-tag {
+  @include set-tag
+}
 
