@@ -38,9 +38,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   line-height: 2.77em;
   &.carbon {
     border-bottom: 1px solid rgba(72, 72, 72, 0.39);
+    p {
+      font-size: 12px;
+    }
   }
   &.brand {
     border-bottom: 1px solid #fff;
+    color: #45939F;
   }
   &.chrome {
     border-bottom: 1px solid #cecece;
@@ -362,7 +366,7 @@ $color-cool: #45939F;
 // ***** ------ [ COLOR MIXINS ] ------ *** //
 
 @mixin color-brand {
-  color: #5cb85c
+  color: #45939F
 }
 
 @mixin color-light {
