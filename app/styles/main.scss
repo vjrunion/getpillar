@@ -546,6 +546,11 @@ $base-width: percentage(64/320);
   padding-right: $base-width*2;
 }
 
+@mixin swipe-height {
+  line-height: normal;
+  padding: $base-width/2;
+}
+
 // ************************************************************************ //
 // ******  [ DEFAULT SELECTORS ]  *******************  //
 // ************************************************* //
@@ -961,5 +966,9 @@ a {
 
 .set-tag {
   @include set-tag
+}
+
+.swipe-height {
+  @include swipe-height
 }
 
