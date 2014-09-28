@@ -66,11 +66,3 @@ This class uses units of 1-6.
 
 This make a standard presentation box with paddings and margins.
 
-######Made with love from:
-
-- Angular
-- SASS
-- GRUNT
-- NODE
-- BOWER
-- YEOMAN
