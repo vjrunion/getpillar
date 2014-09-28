@@ -3,6 +3,13 @@ Pillar
 
 #####Mobile First Templating and Responsive Grid.
 
+#######Pre-Requisites
+- SASS
+- Angular.js
+- Node.js
+- Grunt.js
+- Yeoman
+
 Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation. You can create odd and even based groups with up to 30 sections for each block in the grid.  All positioning and sizing is done via (percent and em) so there is no loss in the actual box model within a browser.
 
 ###Local group
