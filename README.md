@@ -1,6 +1,8 @@
 Pillar 
 ======
 
+<img src="https://github.com/jvrunion/getpillar/blob/master/app/images/pillar.png">
+
 #####Mobile First Templating and Responsive Grid.
 
 #######Pre-Requisites
