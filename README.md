@@ -5,12 +5,28 @@ Pillar
 
 #####Mobile First Templating and Responsive Grid.
 
-#######Pre-Requisites
-- SASS
-- Angular.js
-- Node.js
-- Grunt.js
-- Yeoman
+####Dependancies
+NODEJS - [ http://nodejs.org/download/ ]
+
+
+SASS - Install
+
+	gem install sass
+
+Yeoman
+
+ 	npm install -g yo
+ 	
+Yeoman Generator for AngularJS
+
+ 	npm install -g generator-angular
+ 	
+New Dir
+
+	mkdir new-project
+	
+Then `cd` to `new-project` then run:
+	`yo-angular new-project` AppName is optional
 
 Pillar uses a 5 x 6 grid that allows for smaller devices and mobile presentation. You can create odd and even based groups with up to 30 sections for each block in the grid.  All positioning and sizing is done via (percent and em) so there is no loss in the actual box model within a browser.
 
@@ -50,11 +66,3 @@ This class uses units of 1-6.
 
 This make a standard presentation box with paddings and margins.
 
-######Made with love from:
-
-- Angular
-- SASS
-- GRUNT
-- NODE
-- BOWER
-- YEOMAN
