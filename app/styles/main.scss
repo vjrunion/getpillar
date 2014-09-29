@@ -90,7 +90,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 @mixin zero-padding {
-  padding: 0
+  padding: 0b
 }
 
 @mixin float-left {
@@ -129,18 +129,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 @mixin sass-pack {
   text-shadow: 1px 1px #B75438;
-/*  padding: 1.15em;*/
   font-size: 1em;  
-/*  line-height: 1.75em;  */
   letter-spacing: normal;
 }
 
 @mixin brand-pack {
   text-shadow: 1px 1px #4C925D;
   text-transform: none;
-/*  padding: 1.15em;*/
   font-size: 1em;  
-/*  line-height: 1.75em;  */
   letter-spacing: normal;  
 }
 
@@ -338,7 +334,7 @@ $color-cool: #45939F;
 @mixin back-carbon {
   background-color: #222222;
   background-image: -webkit-linear-gradient(top, #222222, #313131); 
-  background-image:         linear-gradient(to bottom, #222222, #313131);
+  background-image: linear-gradient(to bottom, #222222, #313131);
 }
 
 @mixin back-carbon-brand {
